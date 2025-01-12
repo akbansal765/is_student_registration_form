@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form_container">
+         <header>
+            <h1>Student Enrollment Form</h1>
+            <p class="description">Manage student details effortlessly! Add, edit, update, or delete information with our sleek, user-friendly, and visually appealing interface.</p>
+         </header>
+        <section id="main_section">
+          <form class="form">
+            <span>Student Name</span>
+            <input type="text" name="name" class="input_name">
+            <span>Student ID</span>
+            <input type="number" name="id">
+            <span>Email address</span>
+            <input type="email" name="email">
+            <span>Contact No</span>
+            <input type="number" name="contact">
+            <button type="submit">Upload</button>
+          </form>
+        </div>
+        </section>
+        <div class="form_data_container">
+            <h1>Student Data</h1>
+            <div class="data_heading_box">
+                <p>NAME</p>
+                <p>ID</p>
+                <p>EMAIL</p>
+                <p>CONTACT</p>
+            </div>
+            <div class="student_data_bars_container">
+            <!-- <div class="data_bar">
+                    <p class="student_name">akash</p>
+                    <p class="student_id">1234</p>
+                    <p class="student_email">abc@gmail.com</p>
+                    <p class="student_contact">1234567890</p>
+                    <div class="buttons_box">
+                       <button>
+                         <img class="edit_button" src="icons/edit.png">
+                       </button>
+                       <button>
+                         <img class="delete_button" src="icons/delete.png">
+                       </button>
+                    </div>
+                  </div> -->
+            </div>
+          <footer>
+            <p class="note">Note:- When editing data, it will load into a form for updates. After uploading, the updated entry will replace the existing record.</p>
+          </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

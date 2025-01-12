@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+}
+/* //////////////////  FORM CONTAINER //////////// */
+.form_container{
+    width: 50%;
+    height: 100vh;
+    padding: 2% 0 0 3%;
+    /* border: black dotted 1px; */
+    background-color: rgb(245, 125, 81);
+
+    & h1{
+        font-weight: 400;
+        color: white;
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+
+    & input{
+        width: 70%;
+        height: 6vh;
+        margin-bottom: 5%;
+        border: white solid 2px;
+        background-color: rgb(245, 125, 81);
+        padding: 0 2% 0 2%;
+        color: white;
+
+        &:focus{
+            outline: none;
+            /* color: white; */
+        }
+    }
+    & button{
+        width: 70%;
+        height: 7vh;
+        margin-top: 3%;
+        background-color: rgb(245, 125, 81);
+        border: solid 2px rgb(211, 71, 20);
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgb(138, 40, 4);
+
+        &:hover{
+            color: white;
+            background-color: rgb(228, 105, 60);
+            cursor: pointer;
+        }
+    }
+    & span{
+        color: rgb(138, 40, 4);
+        font-weight: 500;
+    }
+}
+.input_name{
+    text-transform: capitalize;
+}
+.description{
+    font-size: 0.8rem;
+    margin-bottom: 5%;
+}
+/* ///////////////  FORM DATA CONTAINER  ///////////// */
+.form_data_container{
+    width: 50%;
+    height: 100vh;
+    padding: 2% 0 0 3%;
+    background-color: skyblue;
+
+    & h1{
+        font-weight: 400;
+        margin-bottom: 4%;
+        color: white;
+    }
+}
+.data_heading_box{
+    width: 75%;
+    height: 40px;
+    /* border: solid 1px black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+    padding: 0 2% 0 2%;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgb(3, 72, 99);
+}
+.student_data_bars_container{
+    height: 63%;
+    width: 90%;
+    overflow: hidden;
+    padding-top: 1%;
+    /* border: red solid 1px; */
+}
+.overflow_class{
+    overflow-y: scroll;
+}
+.data_bar{
+    height: 50px;
+    border: solid 2px rgb(26, 139, 184);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+    padding: 0 0 0 2%;
+    color: rgb(4, 67, 92);
+    font-weight: 500;
+}
+.buttons_box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 15%;
+
+    & button{
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        width: 35%;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    & button img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.note{
+    font-size: 0.8rem;
+    margin-top: 3%;
+    margin-right: 5%;
+}
+/* ////////////////////////  MEDIA QUERIES //////////////////////// */
+@media (max-width: 1280px){
+  .form_container{
+    & h1{
+        margin-bottom: 2%;
+    }
+  }
+  .form{
+    & input{
+        width: 85%;
+    }
+    & button{
+        width: 85%;
+    }
+   }
+   .note{
+    margin-top: 10%;
+   }
+   .student_data_bars_container{
+    height: 55vh;
+    font-size: 0.8rem;
+   }
+}
+@media (max-width: 1024px){
+    .container{
+        flex-direction: column;
+    }
+    .form_container{
+        width: 100%;
+        height: 65vh;
+
+        & h1{
+            font-size: 3rem;
+            margin-bottom: 1%;
+        }
+    }
+    .form_data_container{
+        width: 100%;
+        height: 65vh;
+
+        & h1{
+            font-size: 3rem;
+        }
+    }
+    .form{
+        & input{
+            width: 95%;
+            height: 4vh;
+        }
+        & button{
+            width: 95%;
+            height: 4vh;
+            font-size: 1rem;
+        }
+    }
+    .data_heading_box{
+        width: 80%;
+        font-size: 1rem;
+    }
+    .data_bar{
+        height: 60px;
+        font-size: 1rem;
+    }
+    .student_data_bars_container{
+        height: 60%;
+        width: 96%;
+    }
+    .note{
+        margin-top: 6%;
+        font-size: 1rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    .form_container{
+        width: 100%;
+        height: 65vh;
+
+        & h1{
+            font-size: 2rem;
+            margin-bottom: 1%;
+        }
+    }
+    .form_data_container{
+        width: 100%;
+        height: 65vh;
+
+        & h1{
+            font-size: 2rem;
+        }
+    }
+    .form{
+        & input{
+            width: 95%;
+            height: 4vh;
+        }
+        & button{
+            width: 95%;
+            height: 4vh;
+            font-size: 1rem;
+        }
+    }
+    .data_heading_box{
+        width: 80%;
+        font-size: 0.9rem;
+    }
+    .data_bar{
+        height: 50px;
+        font-size: 0.9rem;
+    }
+    .student_data_bars_container{
+        height: 60%;
+        width: 96%;
+    }
+    .note{
+        margin-top: 6%;
+        font-size: 0.8rem;
+    }
+    .description{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 640px){
+    .container{
+        flex-direction: column;
+    }
+    .form_container{
+        width: 100%;
+        height: 55vh;
+
+        & h1{
+            font-size: 1.7rem;
+            margin-bottom: 1%;
+        }
+    }
+    .form_data_container{
+        width: 100%;
+        height: 55vh;
+
+        & h1{
+            font-size: 1.7rem;
+        }
+    }
+    .form{
+        & input{
+            width: 95%;
+            height: 3vh;
+        }
+        & button{
+            width: 95%;
+            height: 3vh;
+            font-size: 0.6rem;
+        }
+    }
+    .data_heading_box{
+        width: 85%;
+        font-size: 0.9rem;
+    }
+    .data_bar{
+        height: 45px;
+        font-size: 0.7rem;
+    }
+    .student_data_bars_container{
+        height: 60%;
+        width: 96%;
+    }
+    .note{
+        margin-top: 6%;
+        font-size: 0.7rem;
+    }
+    .description{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 475px){
+    .container{
+        flex-direction: column;
+    }
+    .form_container{
+        width: 100%;
+        height: 55vh;
+
+        & h1{
+            font-size: 1.7rem;
+        }
+    }
+    .form_data_container{
+        width: 100%;
+        height: 55vh;
+
+        & h1{
+            font-size: 1.7rem;
+        }
+    }
+    .form{
+        & input{
+            width: 95%;
+            height: 3vh;
+        }
+        & button{
+            width: 95%;
+            height: 3vh;
+            font-size: 0.6rem;
+        }
+    }
+    .data_heading_box{
+        width: 85%;
+        font-size: 0.7rem;
+    }
+    .data_bar{
+        height: 30px;
+        font-size: 0.5rem;
+    }
+    .student_data_bars_container{
+        height: 60%;
+        width: 96%;
+    }
+    .note{
+        font-size: 0.6rem;
+    }
+    .description{
+        font-size: 0.7rem;
+    }
+}
+@media (max-height: 450px) and (orientation: landscape){
+    .container{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+    .form_container{
+        height: 100%;
+
+        & h1{
+            font-size: 1.5rem;
+        }
+    }
+    .description{
+        font-size: 0.5rem;
+    }
+    .form{
+        & span{
+            font-size: 0.6rem;
+        }
+        & input{
+            width: 70%;
+            height: 5vh;
+            border: 1px white solid;
+        }
+        & button{
+            width: 70%;
+            height: 5vh;
+            border-width: 1px;
+            font-size: 0.7rem;
+        }
+    }
+    .form_data_container{
+        height: 100%;
+
+        & h1{
+            font-size: 1.5rem;
+            margin-bottom: 2%;
+        }
+      }
+    .data_heading_box{
+        font-size: 0.7rem;
+    }
+    .student_data_bars_container{
+        height: 50vh;
+    }
+    .data_bar{
+        height: 35px;
+        font-size: 0.6rem;
+        border-width: 1px;
+    }
+    .note{
+        font-size: 0.6rem;
+    }
+}
