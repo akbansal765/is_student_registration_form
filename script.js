@@ -3,6 +3,7 @@ const form = document.querySelector('.form');
 const studentBarContainer = document.querySelector('.student_data_bars_container');
 const inputFields = document.querySelectorAll('.form_container input');
 const uploadButtton = form.querySelector('button');
+const msgBox = document.querySelector('.message_box');
 
 
 const studentArray = [];
@@ -39,6 +40,8 @@ function deleteElement_and_updateArray(e){
         // deleting element from array
         studentArray.splice(index, 1);
 
+        if(studentArray.length < 1) msgBox.classList.remove('msg_display_hide')
+
         //adding updated student array to local storage
         localStorage.setItem('studentStorageArray', JSON.stringify(studentArray));
 };
@@ -48,6 +51,9 @@ function deleteElement_and_updateArray(e){
 const studentStorageData = localStorage.getItem('studentStorageArray');
 const studentStorageData_1 = JSON.parse(studentStorageData)
 console.log(studentStorageData_1);
+
+// if storage array have some data then hide the message box
+if(studentStorageData_1.length > 0) msgBox.classList.add('msg_display_hide')
 
 if(studentStorageData_1) studentStorageData_1.forEach(obj => {
 
@@ -88,6 +94,9 @@ form.addEventListener('submit', function(e){
 
     //pushiing data to empty studentArray
     studentArray.push(student_data);
+
+    //hide message box when new data uploaded
+    if(studentArray.length > 0) msgBox.classList.add('msg_display_hide');
 
     //adding student array to local storage after data being pushed
     localStorage.setItem('studentStorageArray', JSON.stringify(studentArray));

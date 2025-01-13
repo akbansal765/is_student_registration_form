@@ -101,6 +101,13 @@
     padding-top: 1%;
     /* border: red solid 1px; */
 }
+.message_box{
+    font-size: 2rem;
+    color: rgb(3, 72, 99);
+}
+.msg_display_hide{
+    display: none;
+}
 .overflow_class{
     overflow-y: scroll;
 }
@@ -324,6 +331,9 @@
     .description{
         font-size: 0.7rem;
     }
+    .message_box{
+        font-size: 1.7rem;
+    }
 }
 @media (max-width: 475px){
     .container{
@@ -373,6 +383,9 @@
     }
     .description{
         font-size: 0.7rem;
+    }
+    .message_box{
+        font-size: 1.2rem;
     }
 }
 @media (max-height: 450px) and (orientation: landscape){
@@ -428,5 +441,8 @@
     }
     .note{
         font-size: 0.6rem;
+    }
+    .message_box{
+        font-size: 1.5rem;
     }
 }
