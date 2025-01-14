@@ -50,10 +50,9 @@ function deleteElement_and_updateArray(e){
 ////////////////////Rendering the local storage data to webpage////////////////////////
 const studentStorageData = localStorage.getItem('studentStorageArray');
 const studentStorageData_1 = JSON.parse(studentStorageData)
-console.log(studentStorageData_1);
 
 // if storage array have some data then hide the message box
-if(studentStorageData_1.length > 0) msgBox.classList.add('msg_display_hide')
+if(studentStorageData_1.length) msgBox.classList.add('msg_display_hide')
 
 if(studentStorageData_1) studentStorageData_1.forEach(obj => {
 
