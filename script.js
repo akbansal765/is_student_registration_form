@@ -52,7 +52,7 @@ const studentStorageData = localStorage.getItem('studentStorageArray');
 const studentStorageData_1 = JSON.parse(studentStorageData)
 
 // if storage array have some data then hide the message box
-if(studentStorageData_1.length) msgBox.classList.add('msg_display_hide')
+if(studentStorageData_1) msgBox.classList.add('msg_display_hide');
 
 if(studentStorageData_1) studentStorageData_1.forEach(obj => {
 
